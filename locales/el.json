@@ -37,6 +37,16 @@
         }
     },
     "subscription": {
+        "title": "Subscription”,
+        "state": {
+            "title": "Κατάσταση",
+            "active": "Ενεργό",
+            "paused": "Σε παύση",
+            "finished": "Τελείωσε",
+            "stopped": "Σταμάτησε"
+        },
+        "placed_on": "Τοποθετήθηκε στις",
+        "items": "Είδη",        
         "plan": "Πακέτο",
         "billed_on": "Χρέωση στις",
         "payment_amount": "Ποσό πληρωμής"
@@ -53,10 +63,11 @@
     },
     "order": {
         "loading": "Επεξεργαζόμαστε τα στοιχεία της παραγγελίας σας..."
+        "title": "Παραγγελία"
     },
     "discount_box": {
-        "promo_code": "Κωδικός έκπτωσης / κάρτας δώρου",
-        "promo_code_placeholder": "Συμπληρώστε τον κωδικό σας",
+        "promo_code": "Κωδικός έκπτωσης",
+        "promo_code_placeholder": "Κωδικός",
         "promocode_applied": "Ο κωδικός σας εφαρμόστηκε"
     },
     "address_form": {
@@ -67,17 +78,18 @@
         "city": "Πόλη",
         "country": "Χώρα",
         "postalCode": "Τ.Κ.",
-        "province": "Νομός",
+        "province": "Περιφέρεια",
         "dont_see_address": "Δεν βλέπω τη διεύθυνση μου"
     },
     "billing": {
         "title": "Χρέωση",
         "address": "Διεύθυνση",
         "continue_to_shipping": "Συνεχίστε στην αποστολή",
-        "use_different_shipping_address": "Χρησιμοποιήστε διαφορετική διεύθυνση αποστολής"
+        "use_different_shipping_address": "Χρησιμοποιήστε διαφορετική διεύθυνση"
     },
     "customer": {
         "information": "Πληροφορίες πελάτη"
+        "payment_info": "Τα στοιχεία πληρωμής μου"
     },
     "customer_details": {
         "title": "Στοιχεία πελάτη"
@@ -93,11 +105,13 @@
         "order_details": "Πληροφορίες Παραγγελίας",
         "loading": "Φόρτωση...",
         "no_orders": "Δεν βρέθηκαν παραγγελίες.",
-        "no_subscriptions": "Δεν βρέθηκαν συνδρομές.",
+        "no_subscriptions": "Δεν βρέθηκαν συνδρομές",
         "view_invoice": "Δείτε την απόδειξη",
         "sign_out": "Αποσύνδεση",
         "show_more_orders": "Εμφάνιση %{smart_count} ακόμη παραγγελίας |||| Εμφάνιση %{smart_count} ακόμη παραγγελιών",
-        "orders": "Παραγγελίες"
+        "show_more_subscriptions": "Εμφάνιση %{smart_count} ακόμη συνδρομής |||| Εμφάνιση %{smart_count} ακόμη συνδρομών",        
+        "orders": "Παραγγελίες”,
+        "subscriptions": "Συνδρομές"
     },
     "signin_form": {
         "signin": "Σύνδεση",
@@ -108,7 +122,7 @@
         "close_form": "Πηγαίνετε πίσω"
     },
     "forgot_password_form": {
-        "title": "Ανακτήστε τον κωδικό σας",
+        "title": "Ανάκτήση κωδικού",
         "instructions": "Εισάγετε το email του λογαριασμού σας και θα σας στείλουμε ένα σύνδεσμο επαναφοράς του κωδικού.",
         "email": "Email",
         "email_instructions": "Σας εστάλη ένα email που περιέχει έναν σύνδεσμο. Κάντε κλικ στο σύνδεσμο για να επαναφέρετε τον κωδικό σας.",
@@ -152,7 +166,11 @@
             "card_number": "Αριθμός κάρτας",
             "card_expiration": "MM/YY",
             "card_cvv": "CVV",
-            "card_postal_code": "Τ.Κ."
+            "card_postal_code": "Τ.Κ.”,
+            "invalid_number": "Ο αριθμός κάρτας δεν είναι έγκυρος",
+            "invalid_expiration": "Η ημερομηνία λήξης δεν είναι έγκυρη",
+            "invalid_cvv": "Ο κωδικός CVV δεν είναι έγκυρος",
+            "invalid_postal_code": "Ο Τ.Κ. δεν είναι έγκυρος"
         },
         "still_pending_notice": "Η πληρωμή σας εξακολουθεί να υπόκειται σε επεξεργασία.",
         "title": "Πληρωμή",
@@ -182,7 +200,7 @@
             "p24": "Przelewy24",
             "sepa_debit": "SEPA τραπεζική κατάθεση",
             "sofort": "Sofort τραπεζική κατάθεση",
-            "deferred_payment": "Πληρωμή στο κατάστημα ή με αντικαταβολή"
+            "deferred_payment": "Πληρωμή με αντικαταβολή"
         }
     },
     "discounts": {
@@ -209,6 +227,7 @@
         "email": "Καταχωρίστε ένα έγκυρο email",
         "quantity_revised": "Η ποσότητα έχει αναθεωρηθεί λόγω περιορισμών των αποθεμάτων.",
         "quantity_out_of_stock": "Δυστυχώς αυτό το προϊόν είναι εκτός αποθέματος, αφαιρέστε το από το καλάθι για να συνεχίσετε.",
+        "disabled_country": "Η επιλεγμένη χώρα δεν είναι διαθέσιμη για την ολοκλήρωση της παραγγελείας.",
         "error_payment_items_are_invalid": {
             "title": "Ορισμένα προϊόντα στο καλάθι σας δεν είναι έγκυρα",
             "description": "Παρακαλώ ελέγξτε την παραγγελία σας ή δοκιμάστε ξανά αργότερα."
